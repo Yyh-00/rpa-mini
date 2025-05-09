@@ -1,0 +1,21 @@
+<van-sticky offset-top="{{ 80 }}">
+    <view class="tag-container">
+      <scroll-view scroll-x enable-flex class="tag-ls">
+        <view class="tag-ls_container">
+          <view class="tag-item">麦当劳劳1</view>
+          <view class="tag-item">肯德基</view>
+          <view class="tag-item">麦当劳劳2</view>
+          <view class="tag-item">肯德基</view>
+          <view class="tag-item">麦当劳劳3</view>
+          <view class="tag-item">肯德基</view>
+          <view class="tag-item">麦当劳劳4</view>
+          <view class="tag-item">肯德基</view>
+          <view class="tag-item">麦当劳劳5</view>
+          <view class="tag-item">肯德基</view>
+        </view>
+      </scroll-view>
+      <view class="tag-icon">
+        <van-icon name="list-switch" size="20" />
+      </view>
+    </view>
+  </van-sticky>

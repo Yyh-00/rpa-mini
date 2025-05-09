@@ -1,0 +1,8 @@
+<view class="header">
+  <block>
+    <van-icon name="location-o" />
+    <text>132456789</text>
+  </block>
+  <view>132465</view>
+</view>
+

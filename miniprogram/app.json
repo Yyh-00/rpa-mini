@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/map/map"
+  ],
+  "usingComponents": {
+    "van-icon": "/miniprogram_npm/@vant/weapp/icon/index"
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "RPA",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "rendererOptions": {},
+  "componentFramework": "glass-easel"
+}
