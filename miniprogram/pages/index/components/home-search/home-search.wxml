@@ -1,8 +1,13 @@
 <view class="header">
-  <block>
-    <van-icon name="location-o" />
-    <text>132456789</text>
-  </block>
-  <view>132465</view>
+  <view class="flex-center pl20" bind:tap="onLocationTap">
+    <van-icon name="location-o" size="18" class="mr5" />
+    <text class="mr5">{{address}}</text>
+    <van-icon name="arrow" size="18" />
+  </view>
+  <van-search value="{{ value }}" shape="round" placeholder="请输入购买的商品" field-class="header-search">
+  </van-search>
+  <view class="header-search_btn">
+    <view class="header-search_line" ></view>
+    <text>搜索</text>
+  </view>
 </view>
-

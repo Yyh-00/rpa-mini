@@ -1,19 +1,13 @@
-export const formatTime = (date: Date) => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  return (
-    [year, month, day].map(formatNumber).join('/') +
-    ' ' +
-    [hour, minute, second].map(formatNumber).join(':')
-  )
+// 封装请求为 Promise
+export function requestData(url: string) {
+  return new Promise((resolve, reject) => {
+    wx.request({
+      url,
+      success: res => resolve(res.data),
+      fail: err => reject(err)
+    });
+  });
 }
 
-const formatNumber = (n: number) => {
-  const s = n.toString()
-  return s[1] ? s : '0' + s
-}
+
+

@@ -1,4 +1,4 @@
-<van-sticky offset-top="{{ 80 }}">
+<van-sticky offset-top="{{ 75 }}">
     <view class="tag-container">
       <scroll-view scroll-x enable-flex class="tag-ls">
         <view class="tag-ls_container">

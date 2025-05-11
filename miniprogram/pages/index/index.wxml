@@ -1,7 +1,7 @@
 <home-search />
 <view class="container">
   <view class="banner">
-    <image src="https://innerstatic.tcy365.com/static/108sq-aihuasuanbeta/assets/img/banner-community.2a2a31b8.png" alt="" class="image" />
+    <image src="/images/banner.png" alt="" class="image" />
   </view>
   <home-tag />
   <scroll-view class="goods-ls" scroll-y type="list">

@@ -1,4 +1,7 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+  "van-search":"/miniprogram_npm/@vant/weapp/search/index"
+  },
+  "styleIsolation": "apply-shared"
 }
