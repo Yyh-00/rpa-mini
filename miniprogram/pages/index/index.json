@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "home-search":"./components/home-search/home-search",
-    "home-tag":"./components/home-tag/home-tag"
+    "home-tag":"./components/home-tag/home-tag",
+    "van-button": "/miniprogram_npm/@vant/weapp/button/index"
   }
 }

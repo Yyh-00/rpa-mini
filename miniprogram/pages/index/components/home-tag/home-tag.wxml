@@ -1,21 +1,45 @@
 <van-sticky offset-top="{{ 75 }}">
-    <view class="tag-container">
-      <scroll-view scroll-x enable-flex class="tag-ls">
-        <view class="tag-ls_container">
-          <view class="tag-item">麦当劳劳1</view>
-          <view class="tag-item">肯德基</view>
-          <view class="tag-item">麦当劳劳2</view>
-          <view class="tag-item">肯德基</view>
-          <view class="tag-item">麦当劳劳3</view>
-          <view class="tag-item">肯德基</view>
-          <view class="tag-item">麦当劳劳4</view>
-          <view class="tag-item">肯德基</view>
-          <view class="tag-item">麦当劳劳5</view>
-          <view class="tag-item">肯德基</view>
+  <view class="tag-container">
+    <scroll-view scroll-x enable-flex class="tag-ls">
+      <view class="tag-ls_container">
+        <view wx:for="{{tagList}}" class="tag-item">
+          {{item.TagName}}
         </view>
-      </scroll-view>
-      <view class="tag-icon">
-        <van-icon name="list-switch" size="20" />
+      </view>
+    </scroll-view>
+    <view class="tag-icon" bind:tap="onTagIconTap">
+      <van-icon name="list-switch" size="20" />
+    </view>
+  </view>
+
+  <van-popup show="{{ popupVisiable }}" position="top" custom-style="height: 67%;" bind:close="onClose">
+    <view class="popup-container">
+      <view>
+        <view class="popup-tags mb30">
+          <view class="mb30">标签</view>
+          <view class="popup-ls">
+            <view wx:for="{{tagList}}" class="popup-item mr15 mb15 {{item.TagId === tagId ? 'popup-item_checked':''}}" bind:tap="onTagItemTap" data-id="{{item.TagId}}">
+              {{item.TagName}}
+            </view>
+          </view>
+        </view>
+        <view class="popup-goodtypes mb30">
+          <view class="mb30">商品类型</view>
+          <view class="popup-ls">
+            <view wx:for="{{goodsTypesList}}" class="popup-item mr15 mb15 {{item.Id === goodsType ? 'popup-item_checked':''}}" bind:tap="onGoodsTypesItemTap" data-id="{{item.Id}}">
+              {{item.Name}}
+            </view>
+          </view>
+        </view>
+        <view class="popup-slider mb30">
+          <view class="mb50">人均价筛选 （{{sliderValue}}）</view>
+          <van-slider value="{{ sliderValue }}" range bind:change="onChange" active-color="#ee0a24" />
+        </view>
+      </view>
+      <view class="popup-btn mt30">
+        <van-button custom-class="btn reset-btn" bind:tap="onResetTap">重制</van-button>
+        <van-button custom-class="btn submit-btn" bind:tap="onSubmitTap">完成</van-button>
       </view>
     </view>
-  </van-sticky>
+  </van-popup>
+</van-sticky>

@@ -23,6 +23,7 @@
         font-size: 24rpx;
         background-color: #f5f5f5;
         border-radius: 5rpx;
+        color: #67686f;
       }
     }
   }
@@ -33,5 +34,62 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+  }
+}
+
+.popup-container {
+  height: fit-content;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  .popup-ls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .popup-item {
+      width: fit-content;
+      height: 75rpx;
+      padding: 0 35rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24rpx;
+      background-color: #f5f5f5;
+      border-radius: 5rpx;
+      color: #67686f;
+    }
+
+    .popup-item_checked {
+      border: 1rpx solid #e94359;
+      background-color: #fef9f7;
+      box-sizing: border-box;
+    }
+  }
+
+  .popup-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn {
+      width: 340rpx;
+      border-radius: 20rpx;
+      font-size: 34rpx;
+    }
+
+    .reset-btn {
+      background: #f8f8f9;
+      color: #8b8c90;
+    }
+
+    .submit-btn {
+      background: #ff6759;
+      color: #fff;
+    }
   }
 }

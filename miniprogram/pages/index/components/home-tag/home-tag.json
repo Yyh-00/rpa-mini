@@ -1,6 +1,10 @@
 {
   "component": true,
   "usingComponents": {
-    "van-sticky":"/miniprogram_npm/@vant/weapp/sticky/index"
-  }
+    "van-sticky":"/miniprogram_npm/@vant/weapp/sticky/index",
+    "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+    "van-slider": "/miniprogram_npm/@vant/weapp/slider/index",
+    "van-button": "/miniprogram_npm/@vant/weapp/button/index"
+  },
+  "styleIsolation": "apply-shared"
 }

@@ -1,53 +1,32 @@
-<home-search />
+<home-search v-model="{{searchQuery}}" />
 <view class="container">
   <view class="banner">
     <image src="/images/banner.png" alt="" class="image" />
   </view>
   <home-tag />
   <scroll-view class="goods-ls" scroll-y type="list">
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
-    <view class="goods-item">2</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">3</view>
-    <view class="goods-item">4</view>
+    <view wx:for="{{goodsList}}" class="goods-item">
+      <image src="{{item.ImgList[0]}}" mode="" class="goods-item_img" />
+      <view class="goods-item_info">
+        <view class="goods-item_name">
+          <text class="name">{{item.Name}}</text>
+          <view class="promotion">
+            直降
+            <image src="/images/down.png" mode="" class="down-img mr5 ml5" />
+            {{item.Price - item.DiscountPrice}} 元
+          </view>
+        </view>
+        <view class="goods-item_btn">
+          <image src="/images/buy-btn.png" mode="" class="buy-btn_img" />
+          <view class="buy-btn_content">
+            <view class="buy-btn_price">
+              <text class="discount-price red mr10">¥{{item.DiscountPrice}}</text>
+              <text class="price">¥{{item.Price}}</text>
+            </view>
+            <view class="success-rate red">抢单成功率 {{item.SuccessRate}}%</view>
+          </view>
+        </view>
+      </view>
+    </view>
   </scroll-view>
 </view>
