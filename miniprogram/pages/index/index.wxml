@@ -1,4 +1,4 @@
-<home-search v-model="{{searchQuery}}" />
+<home-search bind:change="onSearchChange" />
 <view class="container">
   <view class="banner">
     <image src="/images/banner.png" alt="" class="image" />

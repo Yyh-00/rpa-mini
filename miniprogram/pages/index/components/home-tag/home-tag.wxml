@@ -11,7 +11,6 @@
       <van-icon name="list-switch" size="20" />
     </view>
   </view>
-
   <van-popup show="{{ popupVisiable }}" position="top" custom-style="height: 67%;" bind:close="onClose">
     <view class="popup-container">
       <view>
@@ -36,7 +35,7 @@
           <van-slider value="{{ sliderValue }}" range bind:change="onChange" active-color="#ee0a24" />
         </view>
       </view>
-      <view class="popup-btn mt30">
+      <view class="popup-btn mt150">
         <van-button custom-class="btn reset-btn" bind:tap="onResetTap">重制</van-button>
         <van-button custom-class="btn submit-btn" bind:tap="onSubmitTap">完成</van-button>
       </view>

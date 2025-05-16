@@ -2,7 +2,7 @@
 
 Page({
   data: {
-    goodsList:
+    originGoodsList:
       [
         {
           "GoodsId": 56,
@@ -656,12 +656,27 @@ Page({
           ]
         }
       ],
-    searchQuery: ''
+    searchQuery: '',
+    goodsList: [],
   },
-  watch: {
-    'searchQuery': function (newVal: string) {
-      console.log(newVal, 'newVal')
-    }
+  onLoad() {
+    const _this = (this as any)
+
+    this.setData({
+      goodsList: _this.data.originGoodsList
+    })
+
+  },
+  onSearchChange(event: any) {
+    const _this = (this as any)
+    const _searchQuery = event.detail
+    const _arr = _this.data.originGoodsList.filter((item: any) => {
+      return item.Name.includes(_searchQuery)
+    })
+
+    this.setData({
+      goodsList: _arr
+    })
   },
   methods: {}
 })
