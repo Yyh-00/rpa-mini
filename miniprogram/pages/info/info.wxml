@@ -1,0 +1,28 @@
+<swiper indicator-dots class="swiper-container">
+  <swiper-item wx:for="{{itemInfo.ImgList}}" wx:key="index">
+    <image src="{{item}}" mode="aspectFit" class="img"></image>
+  </swiper-item>
+</swiper>
+
+<view class="info-container">
+  <view class="item-info">
+    <text class="name">{{itemInfo.Name}}</text>
+    <view class="promotion">
+      直降
+      <image src="/images/down.png" mode="" class="down-img mr5 ml5" />
+      {{itemInfo.Price - itemInfo.DiscountPrice}} 元
+    </view>
+    <view class="info-price">
+      <text class="discount-price mr10">¥{{itemInfo.DiscountPrice}}</text>
+      <text class="price">¥{{itemInfo.Price}}</text>
+    </view>
+  </view>
+  <view class="item-desc">
+    <view class="desc-title">商品详情</view>
+    <rich-text nodes="{{itemInfo.Description}}"></rich-text>
+  </view>
+</view>
+
+<view class="btn-container">
+  <van-button round type="primary" custom-class="buy-btn">立即购买</van-button>
+</view>

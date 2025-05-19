@@ -35,6 +35,10 @@ Component({
       this.setData({ searchQuery: event.detail.value })
     },
 
+    onSearchClear() {
+      this.triggerEvent('clear');
+    },
+
     onSearch() {
       this.triggerEvent('change', (this as any).data.searchQuery);
     }

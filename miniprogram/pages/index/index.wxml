@@ -1,11 +1,11 @@
-<home-search bind:change="onSearchChange" />
+<home-search bind:change="onSearchChange" bind:clear="onSearchClear"/>
 <view class="container">
   <view class="banner">
     <image src="/images/banner.png" alt="" class="image" />
   </view>
-  <home-tag />
+  <home-tag bind:change="onTagChange"/>
   <scroll-view class="goods-ls" scroll-y type="list">
-    <view wx:for="{{goodsList}}" class="goods-item">
+    <view wx:for="{{goodsList}}" class="goods-item" bind:tap="onItemInfo" data-info="{{item}}">
       <image src="{{item.ImgList[0]}}" mode="" class="goods-item_img" />
       <view class="goods-item_info">
         <view class="goods-item_name">

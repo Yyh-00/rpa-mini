@@ -4,10 +4,10 @@
     <text class="mr5">{{address}}</text>
     <van-icon name="arrow" size="18" />
   </view>
-  <van-search value="{{ searchQuery }}" shape="round" placeholder="请输入购买的商品" field-class="header-search" bind:blur="onSearchBlur">
+  <van-search value="{{ searchQuery }}" shape="round" placeholder="请输入购买的商品" field-class="header-search" bind:blur="onSearchBlur" bind:clear="onSearchClear">
   </van-search>
   <view class="header-search_btn" bind:tap="onSearch">
-    <view class="header-search_line" ></view>
+    <view class="header-search_line"></view>
     <text>搜索</text>
   </view>
 </view>

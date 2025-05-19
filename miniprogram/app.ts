@@ -20,7 +20,6 @@ App({
     wx.getSetting({
       success: (res) => {
         const auth = res.authSetting['scope.userLocation'];
-        wx.setStorageSync('locationAuth', true);
 
         if (auth) {
           getUserLocation(2);
@@ -39,7 +38,6 @@ App({
     wx.authorize({
       scope: 'scope.userLocation',
       success: () => {
-        wx.setStorageSync('locationAuth', true);
         getUserLocation(2);
       },
       fail: () => {

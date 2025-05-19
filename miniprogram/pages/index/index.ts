@@ -1,5 +1,3 @@
-// import { createPage } from 'miniprogram-computed';
-
 Page({
   data: {
     originGoodsList:
@@ -7,6 +5,7 @@ Page({
         {
           "GoodsId": 56,
           "Status": 2,
+          "TagId": 16,
           "SkuId": "53",
           "Price": 50.0,
           "DiscountPrice": 0.01,
@@ -678,5 +677,35 @@ Page({
       goodsList: _arr
     })
   },
-  methods: {}
+
+  onSearchClear() {
+    const _this = (this as any)
+
+    this.setData({
+      goodsList: _this.data.originGoodsList
+    })
+  },
+
+  onTagChange(event: any) {
+    const _this = (this as any)
+    const _tagId = event.detail
+    const _arr = _this.data.originGoodsList.filter((item: any) => {
+      return item.TagId === _tagId
+    })
+
+    if (!_tagId) {
+      this.setData({ goodsList: _this.data.originGoodsList })
+      return
+    }
+    this.setData({ goodsList: _arr })
+  },
+
+  onItemInfo(event: any) {
+    const itemInfo = event.currentTarget.dataset.info;
+
+    wx.setStorageSync('itemInfo', itemInfo);
+    wx.navigateTo({
+      url: '/pages/info/info'
+    });
+  }
 })

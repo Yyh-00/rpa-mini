@@ -45,8 +45,29 @@ Component({
 
     // 标签项点击
     onTagItemTap(event: any) {
+      const _this: any = this
       const id = event.currentTarget.dataset.id;
 
+      if (_this.data.tagId === id) {
+        this.setData({ tagId: '' })
+        this.triggerEvent('change', '');
+        return
+      } else {
+        this.setData({ tagId: id })
+      }
+
+      this.triggerEvent('change', _this.data.tagId);
+    },
+
+    // pop 标签项点击
+    onPopTagItemTap(event: any) {
+      const _this: any = this
+      const id = event.currentTarget.dataset.id;
+
+      if (_this.data.tagId === id) {
+        this.setData({ tagId: '' })
+        return
+      }
       this.setData({ tagId: id })
     },
 
@@ -78,6 +99,9 @@ Component({
 
     // 提交
     onSubmitTap() {
+      const _this: any = this
+
+      this.triggerEvent('change', _this.data.tagId);
       this.setData({ popupVisiable: false })
     },
 
