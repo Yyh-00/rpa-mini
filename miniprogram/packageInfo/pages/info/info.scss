@@ -89,11 +89,13 @@ page {
   background-color: #fff;
   z-index: 2;
   box-sizing: border-box;
+  border: none;
 
   .buy-btn {
     width: 100%;
     height: 90rpx;
     font-size: 34rpx;
     background-color: #ff5141;
+    border: none;
   }
 }
