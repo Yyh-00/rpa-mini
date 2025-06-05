@@ -11,15 +11,16 @@
     position: absolute;
     top: 75rpx;
     right: 60rpx;
-    width: 100rpx;
+    width: 80rpx;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 28rpx;
   }
 
   &-search_line {
     width: 1rpx;
-    height: 30rpx;
+    height: 28rpx;
     background-color: #ccc;
   }
 }

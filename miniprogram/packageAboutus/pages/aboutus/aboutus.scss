@@ -1,0 +1,29 @@
+.my-manage {
+  margin: 25rpx 20rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90rpx;
+
+    .arrow {
+      width: 32rpx;
+      height: 32rpx;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        color: #141414;
+      }
+    }
+  }
+}

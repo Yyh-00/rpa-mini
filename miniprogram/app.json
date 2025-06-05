@@ -1,7 +1,23 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/info/info"
+    "pages/my/my"
+  ],
+  "subPackages": [
+    {
+      "root": "packageInfo",
+      "name": "info",
+      "pages": [
+        "pages/info/info"
+      ]
+    },
+    {
+      "root": "packageAboutus",
+      "name": "aboutus",
+      "pages": [
+        "pages/aboutus/aboutus"
+      ]
+    }
   ],
   "usingComponents": {
     "van-icon": "/miniprogram_npm/@vant/weapp/icon/index"
@@ -22,5 +38,25 @@
   "requiredPrivateInfos": [
     "getLocation",
     "chooseLocation"
-  ]
+  ],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#e40030",
+    "backgroundColor": "#F7F7F7",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "商城",
+        "iconPath": "images/mall.png",
+        "selectedIconPath": "images/mall-select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-select.png"
+      }
+    ]
+  }
 }

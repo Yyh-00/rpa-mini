@@ -705,7 +705,7 @@ Page({
 
     wx.setStorageSync('itemInfo', itemInfo);
     wx.navigateTo({
-      url: '/pages/info/info'
+      url: '/packageInfo/pages/info/info'
     });
   }
 })

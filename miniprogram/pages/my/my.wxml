@@ -1,0 +1,78 @@
+<image src="/images/my-bg.png" mode="" class="bg" />
+
+<view class="user-info">
+  <view class="user-avatar">
+    <image src="/images/avatar.png" mode="" />
+  </view>
+  <view class="user-text">
+    <view class="user-name">Aaaaaa</view>
+    <view class="uid">Uid：607487</view>
+  </view>
+</view>
+
+<view class="my-right">
+  <text class="my-right_title">我的权益</text>
+  <view class="my-right_con">
+    <view class="item">
+      <text class="count">0</text>
+      <text class="title">权益次数(次)</text>
+    </view>
+    <view class="item">
+      <text class="count">0</text>
+      <text class="title">历史优惠(元)</text>
+    </view>
+  </view>
+</view>
+
+<view class="my-order">
+  <text class="my-order_title">订单管理</text>
+  <view class="my-order_con">
+    <view class="item">
+      <image src="/images/all_icon.png" mode="" />
+      <text class="title">全部</text>
+    </view>
+    <view class="item">
+      <image src="/images/pay_icon.png" mode="" />
+      <text class="title">待付款</text>
+    </view>
+    <view class="item">
+      <image src="/images/get_icon.png" mode="" />
+      <text class="title">待收货</text>
+    </view>
+    <view class="item">
+      <image src="/images/return_icon.png" mode="" />
+      <text class="title">退货/售后</text>
+    </view>
+  </view>
+</view>
+
+<view class="my-manage">
+  <view class="my-manage_item">
+    <view class="info">
+      <image src="/images/address_icon.png" mode="" />
+      <text class="title">地址管理</text>
+    </view>
+    <image src="/images/arrow.png" mode="" class="arrow"/>
+  </view>
+  <view class="my-manage_item">
+    <view class="info">
+      <image src="/images/create_icon.png" mode="" />
+      <text class="title">创建桌面图标</text>
+    </view>
+    <image src="/images/arrow.png" mode="" class="arrow"/>
+  </view>
+  <view class="my-manage_item" bind:tap="onGoAboutUs">
+    <view class="info" >
+      <image src="/images/man_icon.png" mode="" />
+      <text class="title">关于我们</text>
+    </view>
+    <image src="/images/arrow.png" mode="" class="arrow"/>
+  </view>
+  <view class="my-manage_item">
+    <view class="info">
+      <image src="/images/quit_icon.png" mode="" />
+      <text class="title">退出登录</text>
+    </view>
+    <image src="/images/arrow.png" mode="" class="arrow"/>
+  </view>
+</view>

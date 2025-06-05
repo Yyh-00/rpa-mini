@@ -1,10 +1,11 @@
-page{
+page {
   background-color: #f5f5f5;
 
 }
 
 .swiper-container {
   height: 550rpx;
+  background-color: #fff;
 
   .img {
     width: 100%;
@@ -13,7 +14,7 @@ page{
 }
 
 .info-container {
-  padding: 20rpx;
+  padding: 25rpx;
   box-sizing: border-box;
 
   .item-info {
@@ -87,6 +88,7 @@ page{
   padding: 20rpx;
   background-color: #fff;
   z-index: 2;
+  box-sizing: border-box;
 
   .buy-btn {
     width: 100%;
